@@ -1,16 +1,16 @@
 
 /**
-* second solution
+* First solution
 **/
-const arr = [2,3,43,5,6,78,9,54,32,45];
-if(arr.length <= 2) {
+const unsortedNumber = [2,3,43,5,6,78,9,54,32,45];
+if(unsortedNumber.length <= 2) {
   console.log("Array have minimum two value");
 }
-for(let num of arr ) {
-  arr[1] = num > arr[1] && num > arr[0] ? arr[0] : (num > arr[1] ? num : arr[1]) ;
-  arr[0] = num > arr[0] ? num : arr[0];
+for(let value of unsortedNumber ) {
+  unsortedNumber[1] = value > unsortedNumber[1] && value > unsortedNumber[0] ? unsortedNumber[0] : (value > unsortedNumber[1] ? value : unsortedNumber[1]) ;
+  unsortedNumber[0] = value > unsortedNumber[0] ? value : unsortedNumber[0];
 }
-console.log('a is first largest',arr[0],'b is second largest number',arr[1])
+console.log('It is second largest number in array',unsortedNumber[1])
 
 /**
 * second solution
