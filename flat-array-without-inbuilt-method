@@ -1,0 +1,13 @@
+ [1, [2], [3, [4]]] -> [1, 2, 3, 4] 
+ const multipleArray =[1, [2], [3, [4, [5, [[6]]]]]]; 
+ const flatArrays = []; 
+ const flatArray = (fArray) => {  
+    for(let value of fArray) {     
+        if(typeof value === 'object') {        
+            flatArray(value)     
+        } else {   
+          flatArrays.push(value);
+       }
+    }    
+  } 
+  flatArray(multipleArray) console.log({flatArrays})
